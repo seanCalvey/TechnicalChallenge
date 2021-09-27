@@ -42,3 +42,7 @@ In this challege I compare to dataframes. I used the equals method to check the 
 ---
 (8) For Pay Elements in the GTN file, the values have a numeric type. 
 
+In this challege I extract to pay elements. Then I use the `dtype` to get a 
+Series of the type of colums. Then I use a helper method to loop through the
+Series an check each type. If the pay contains a object or string I return a false
+
