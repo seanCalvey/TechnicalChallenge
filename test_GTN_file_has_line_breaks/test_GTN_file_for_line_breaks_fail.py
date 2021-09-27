@@ -6,7 +6,7 @@ import pandas as pd
 class MyLineBreakTestCase(unittest.TestCase):
 
     def setUp(self):
-        self.GTN_df = pd.read_excel("data_pass/GTN.xlsx")
+        self.GTN_df = pd.read_excel("data_fail/GTNWithLineBreaks.xlsx")
 
     def tearDown(self):
         self.GTN_df = ""
@@ -16,7 +16,7 @@ class MyLineBreakTestCase(unittest.TestCase):
         self.assertEqual(len(dropped_line_breaks), len(self.GTN_df), "GNT file has lineBreaks")
 
     def test_GTN_file_with_line_breaks(self):
-        self.GTN_df_with_line_breaks = pd.read_excel("data_fail/GTNWithLineBreaks.xlsx")
+        self.GTN_df_with_line_breaks = pd.read_excel("data_pass/GTN.xlsx")
         dropped_line_breaks = self.GTN_df_with_line_breaks.dropna(how="all")
         self.assertNotEqual(len(dropped_line_breaks), len(self.GTN_df_with_line_breaks), "GNT file has lineBreaks")
 

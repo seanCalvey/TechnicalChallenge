@@ -5,8 +5,8 @@ import pathlib
 class MyFileTypeTestCase(unittest.TestCase):
 
     def setUp(self):
-        self.GTN_file_extension = pathlib.Path("data_pass/GTN.xlsx").suffix
-        self.payslip_format_file_extension = pathlib.Path("data_pass/Payrun.xlsx").suffix
+        self.GTN_file_extension = pathlib.Path("data_fail/bad_file.txt").suffix
+        self.payslip_format_file_extension = pathlib.Path("data_fail/bad_file.txt").suffix
 
     def tearDown(self):
         self.GTN_file_extension = ""
