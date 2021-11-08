@@ -1,4 +1,4 @@
-## Payslip Technical Challenge
+## Technical Challenge
 
 ### imports
 pandas
